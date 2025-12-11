@@ -9,8 +9,11 @@ import SwiftUI
 
 // overlay 是把一個 view 放到另個 view 上面
 struct CircleImage: View {
+    var image: Image
+
+
     var body: some View {
-        Image("turtlerock")
+        image
             .clipShape(Circle())
             .overlay {
                 Circle().stroke(.white, lineWidth: 4)
@@ -21,5 +24,5 @@ struct CircleImage: View {
 
 
 #Preview {
-    CircleImage()
+    CircleImage(image: Image("turtlerock"))
 }
