@@ -7,7 +7,7 @@
 
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+//var landmarks: [Landmark] = load("landmarkData.json")
 
 // 這是一個 泛型（Generic）函式
 //T: Decodable 表示你要求回傳的型別 必須可以被 JSONDecoder 解析
@@ -38,7 +38,7 @@ func load<T: Decodable>(_ filename: String) -> T {
 }
 
 // 測試用的程式碼，沒啥好講的，放在logging用的
-func debugPrintLandmarks() {
-    print(landmarks.count)
-    print(landmarks.first?.name ?? "No name")
-}
+//func debugPrintLandmarks() {
+//    print(landmarks.count)
+//    print(landmarks.first?.name ?? "No name")
+//}

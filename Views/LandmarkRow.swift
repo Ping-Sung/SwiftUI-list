@@ -24,10 +24,10 @@ struct LandmarkRow: View {
 }
 
 #Preview {
-    Group {
-        LandmarkRow(landmark: landmarks[0])
-        LandmarkRow(landmark: landmarks[1])
-    }
+//    Group {
+//        LandmarkRow(landmark: landmarks[0])
+//        LandmarkRow(landmark: landmarks[1])
+//    }
 }
 // 可以有多個preview, 但現在暫時不需要就先取消掉
 //#Preview("Silver Salmon Creek") {

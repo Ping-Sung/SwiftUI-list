@@ -51,13 +51,32 @@ struct LandmarkDetail: View {
         .navigationTitle(landmark.name)
         .navigationBarTitleDisplayMode(.inline)
         // commend + shift + c 可以顯示 logging
-        .onAppear {
-            debugPrintLandmarks()
-        }
+//        .onAppear {
+//            debugPrintLandmarks()
+//        }
     }
 }
 
 
+
 #Preview {
-    LandmarkDetail(landmark: landmarks[0])
+    // 建一個假的 landmark 給 preview 用
+    let sample = Landmark(
+        id: 1001,
+        name: "Turtle Rock",
+        category: "Rivers",
+        city: "Twentynine Palms",
+        state: "California",
+        isFeatured: true,
+        isFavorite: true,
+        park: "Joshua Tree National Park",
+        description: "Preview landmark for SwiftUI.",
+        imageName: "turtlerock",
+        coordinates: Landmark.Coordinates(
+            longitude: -116.166868,
+            latitude: 34.011286
+        )
+    )
+
+    LandmarkDetail(landmark: sample)
 }
